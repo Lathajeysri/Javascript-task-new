@@ -26,3 +26,64 @@ function countWords(str) {
   // Example usage:
   var wordCounts = countWords('Far far away,behind the word mountains,far from the countries Vokalia and Consonantia,there live the blind texts.separated they live in Bookmarksgrove right at the coast of the Semantics,a large language ocean.');
   console.log(wordCounts);
+
+
+
+  /*Copy code
+function countLetters(str) {
+  let counts = {};
+
+  // Loop through each character in the string
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    // Ignore non-alphabetic characters
+    if (!/[a-zA-Z]/.test(char)) {
+      continue;
+    }
+
+    // If the character hasn't been counted yet, initialize its count to 1
+    if (!(char in counts)) {
+      counts[char] = 1;
+    }
+    // Otherwise, increment its count by 1
+    else {
+      counts[char]++;
+    }
+  }
+
+  let maxCount = 0;
+  let minCount = Infinity;
+  let mostCommon = "";
+  let leastCommon = "";
+
+  // Loop through each key in the counts object
+  for (let char in counts) {
+    let count = counts[char];
+
+    // Update maxCount and mostCommon if necessary
+    if (count > maxCount) {
+      maxCount = count;
+      mostCommon = char;
+    }
+
+    // Update minCount and leastCommon if necessary
+    if (count < minCount) {
+      minCount = count;
+      leastCommon = char;
+    }
+  }
+
+  return {
+    counts: counts,
+    mostCommon: mostCommon,
+    leastCommon: leastCommon
+  };
+}
+
+// Example usage:
+let result = countLetters("Hello, world!");
+console.log(result.counts);
+console.log("Most common letter: " + result.mostCommon);
+console.log("Least common letter: " + result.leastCommon);
+*/
